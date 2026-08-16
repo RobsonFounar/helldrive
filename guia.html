@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dicas Games — Helldivers 2: o que levar</title>
+    <meta
+      name="description"
+      content="Guia simples de Helldivers 2: primária, secundária, suporte, granada, mochila, Eagle, sentinela, booster, armadura, warbond, orbital e veículo. Rank S+ a D, pensado para iniciantes e TDA."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+  </head>
+  <body>
+    <a class="pular" href="#comecar">Pular para a escolha rápida</a>
+
+    <header class="topo">
+      <div class="topo__marca">
+        <p class="topo__selo">Dicas Games</p>
+        <h1 id="titulo">Helldivers 2 · Armas primárias</h1>
+        <p class="topo__sub" id="subtitulo">
+          51 armas. Uma pergunta: <strong>contra quem você vai lutar?</strong>
+        </p>
+      </div>
+      <div class="topo__acoes">
+        <button type="button" class="btn btn--ghost" id="btn-foco" aria-pressed="false">
+          Modo foco
+        </button>
+        <p class="topo__meta" id="meta-patch"></p>
+      </div>
+    </header>
+
+    <nav class="menu-wrap" aria-label="Páginas do site">
+      <div class="menu">
+        <a class="menu__link" href="index.html">O jogo</a>
+        <a class="menu__link is-on" href="guia.html" aria-current="page">Tier List</a>
+      </div>
+    </nav>
+
+    <nav class="cats-wrap" aria-label="Tipo de item">
+      <div class="cats" id="cats" role="tablist"></div>
+    </nav>
+
+    <main>
+      <section class="comecar" id="comecar">
+        <h2>Comece aqui</h2>
+        <p class="lead" id="lead">
+          Não leia a lista inteira. Toque em <strong>uma</strong> opção.
+          A página mostra o item mais fácil e o mais forte.
+        </p>
+        <div class="escolhas" role="group" aria-label="Escolha o tipo de inimigo">
+          <button type="button" class="escolha" data-faccao="terminids">
+            <img class="escolha__img" src="https://s3.us-east-2.amazonaws.com/wp.uggcms/wp-content/uploads/2026/03/TerminidIco.png" alt="" width="48" height="48" />
+            <span class="escolha__nome">Insetos</span>
+            <span class="escolha__jogo">Terminids</span>
+          </button>
+          <button type="button" class="escolha" data-faccao="automatons">
+            <img class="escolha__img" src="https://s3.us-east-2.amazonaws.com/wp.uggcms/wp-content/uploads/2026/03/AutomatonIco.png" alt="" width="48" height="48" />
+            <span class="escolha__nome">Robôs</span>
+            <span class="escolha__jogo">Automatons</span>
+          </button>
+          <button type="button" class="escolha" data-faccao="illuminate">
+            <img class="escolha__img" src="https://s3.us-east-2.amazonaws.com/wp.uggcms/wp-content/uploads/2026/03/IlluminateIco.png" alt="" width="48" height="48" />
+            <span class="escolha__nome">Alienígenas</span>
+            <span class="escolha__jogo">Illuminate</span>
+          </button>
+          <button type="button" class="escolha escolha--todas is-on" data-faccao="todas">
+            <span class="escolha__emoji" aria-hidden="true">⭐</span>
+            <span class="escolha__nome">Não sei</span>
+            <span class="escolha__jogo">Serve nas três</span>
+          </button>
+        </div>
+        <div class="dica-rapida" id="dica-rapida" hidden></div>
+      </section>
+
+      <section class="glossario" id="glossario">
+        <details>
+          <summary>Palavras do jogo, em português claro</summary>
+          <dl>
+            <div>
+              <dt>Primária</dt>
+              <dd>A arma na mão o tempo todo.</dd>
+            </div>
+            <div>
+              <dt>Secundária</dt>
+              <dd>A da coldre. Pânico, cura, fechar buraco ou matar o tanque.</dd>
+            </div>
+            <div>
+              <dt>Suporte</dt>
+              <dd>Arma pesada que você chama do céu. Uma por vez.</dd>
+            </div>
+            <div>
+              <dt>Mochila</dt>
+              <dd>Fica nas costas. Escudo, pulo, munição ou drone. Algumas armas de suporte também ocupam as costas.</dd>
+            </div>
+            <div>
+              <dt>Eagle vs Orbital</dt>
+              <dd>Eagle é o avião: várias cargas, depois rearma. Orbital é a nave: um tiro, espera recarga.</dd>
+            </div>
+            <div>
+              <dt>Rank S+ até D</dt>
+              <dd>S+ é o mais forte naquele inimigo. D é fraco demais. Uma peça pode ser S+ em inseto e D em robô.</dd>
+            </div>
+            <div>
+              <dt>Warbond</dt>
+              <dd>Passe de desbloqueio. Democratic Detonation costuma ser o primeiro que vale comprar.</dd>
+            </div>
+          </dl>
+        </details>
+      </section>
+
+      <section class="filtros" id="lista" aria-label="Filtros da lista">
+        <label class="busca">
+          <span id="label-busca">Buscar</span>
+          <input type="search" id="busca" placeholder="Ex.: Purifier, fácil, fogo…" autocomplete="off" />
+        </label>
+        <label>
+          <span>Tipo</span>
+          <select id="filtro-tipo">
+            <option value="">Todos</option>
+          </select>
+        </label>
+        <label>
+          <span>Rank nesta frente</span>
+          <select id="filtro-tier">
+            <option value="">Todos</option>
+            <option value="S+">S+</option>
+            <option value="S">S</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="filtro-facil" />
+          <span>Só fáceis de usar</span>
+        </label>
+      </section>
+
+      <p class="contador" id="contador" aria-live="polite"></p>
+      <div class="grades" id="grades"></div>
+
+      <section class="bloco canais" id="canais">
+        <h2>A missão continua nas lives</h2>
+        <p class="lead">
+          Este site mostra o que levar. A live mostra o que acontece quando a cápsula abre.
+          Segue os canais do Cão Danado e do Jogue como um Ogro, entra no chat e pergunta sobre esse e outros jogos ou de qualquer outros assuntos.
+        </p>
+        <div class="canais__grade">
+          <article class="canal">
+            <header class="canal__topo">
+              <img
+                class="canal__logo"
+                src="assets/img/twitch-cao-danado.png"
+                alt="Logo do canal Cão Danado"
+                width="96"
+                height="96"
+              />
+              <div>
+                <p class="canal__rede">Lives</p>
+                <h3>Cão Danado</h3>
+                <div class="canal__redes" aria-label="Onde assistir Cão Danado">
+                  <a class="rede-ico rede-ico--twitch" href="https://www.twitch.tv/cao_danado" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/icone-twitch.svg" alt="" width="22" height="22" />
+                    <span>Twitch</span>
+                  </a>
+                  <a class="rede-ico rede-ico--kick" href="https://kick.com/cao-danado" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/icone-kick.svg" alt="" width="22" height="22" />
+                    <span>Kick</span>
+                  </a>
+                  <a class="rede-ico rede-ico--youtube" href="https://www.youtube.com/channel/UCnd4qHBuUlLjSMtLxeKjOgw/" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/icone-youtube.svg" alt="" width="22" height="22" />
+                    <span>YouTube</span>
+                  </a>
+                </div>
+              </div>
+            </header>
+            <p>🎮 Tester de games indie. Curto jogar sobrevivência, simulação e FPS.
+              Criador e apresentador do talk show “Na Coleira”.
+              Se quiser falar de esportes, também gosto muito.
+              Chega mais: tira dúvida, troca ideia e joga junto.</p>
+          </article>
+          <article class="canal">
+            <header class="canal__topo">
+              <img
+                class="canal__logo"
+                src="assets/img/twitch-jogue-como-um-ogro.png"
+                alt="Logo do canal Jogue como um Ogro"
+                width="96"
+                height="96"
+              />
+              <div>
+                <p class="canal__rede">Lives</p>
+                <h3>Jogue como um Ogro</h3>
+                <div class="canal__redes" aria-label="Onde assistir Jogue como um Ogro">
+                  <a class="rede-ico rede-ico--twitch" href="https://www.twitch.tv/joguecomoumogro" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/icone-twitch.svg" alt="" width="22" height="22" />
+                    <span>Twitch</span>
+                  </a>
+                  <a class="rede-ico rede-ico--kick" href="https://kick.com/joguecomoumogro" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/icone-kick.svg" alt="" width="22" height="22" />
+                    <span>Kick</span>
+                  </a>
+                </div>
+              </div>
+            </header>
+            <p>Caster (narrador e comentarista) de e-sports.
+              Curto super-heróis, animes, séries, comida japonesa e esporte (F1, tênis e futebol americano são os meus preferidos).
+              Quer falar disso ou de qualquer outra coisa? Chega mais.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>
+        Textos originais em português. Ranks e ícones alinhados às tier lists públicas de
+        <a id="link-fonte" href="https://u.gg/hd2/tier-list/helldivers-2-primary-weapons-tier-list" rel="noopener noreferrer">u.gg</a>
+        (patch 6.3.1 / armadura 7.0.0), para identificação visual. Helldivers 2 é da Arrowhead Game Studios.
+      </p>
+    </footer>
+
+    <script src="assets/data/armas.js"></script>
+    <script src="assets/data/catalogo.js"></script>
+    <script src="assets/data/imagens.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
